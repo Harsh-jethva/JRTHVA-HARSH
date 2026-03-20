@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="color-scheme" content="dark" />
+    <title>Harsh Jethva — Creative Developer</title>
+    <meta
+      name="description"
+      content="A premium, animated portfolio experience — Harsh Jethva, Creative Developer."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./normalize/normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <!-- Grain overlay -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Custom cursor -->
+    <div class="cursor" aria-hidden="true">
+      <div class="cursor__dot"></div>
+      <div class="cursor__ring"></div>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader" role="status" aria-live="polite" aria-label="Loading">
+      <div class="preloader__inner">
+        <div class="preloader__brand">
+          <span class="preloader__logo">HJ</span>
+          <span class="preloader__name">Harsh Jethva</span>
+        </div>
+        <div class="preloader__meter">
+          <div class="preloader__bar" aria-hidden="true"></div>
+          <div class="preloader__percent">
+            <span class="preloader__percentValue">0</span><span class="preloader__percentSign">%</span>
+          </div>
+        </div>
+        <div class="preloader__hint">Crafting the experience…</div>
+      </div>
+    </div>
+
+    <!-- Three.js hero background -->
+    <canvas id="bg" class="bg" aria-hidden="true"></canvas>
+
+    <!-- Top nav -->
+    <header class="nav" data-reveal="nav">
+      <div class="nav__inner">
+        <a class="nav__brand magnetic" href="#top" aria-label="Go to top">
+          <span class="nav__brandMark">HJ</span>
+          <span class="nav__brandText">Harsh Jethva</span>
+        </a>
+
+        <nav class="nav__links" aria-label="Primary">
+          <a class="nav__link magnetic" href="#about" data-cursor="link">About</a>
+          <a class="nav__link magnetic" href="#work" data-cursor="link">Work</a>
+          <a class="nav__link magnetic" href="#skills" data-cursor="link">Skills</a>
+          <a class="nav__link magnetic" href="#platforms" data-cursor="link">Platforms</a>
+          <a class="nav__link magnetic" href="#experience" data-cursor="link">Experience</a>
+          <a class="nav__link magnetic" href="#contact" data-cursor="link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content" class="page">
+      <!-- HERO -->
+      <section id="top" class="hero section">
+        <div class="hero__grid">
+          <div class="hero__left">
+            <div class="hero__kicker" data-reveal="fadeUp">
+              <span class="pill">Available for freelance</span>
+              <span class="hero__dot"></span>
+              <span class="muted">Based on Earth</span>
+            </div>
+
+            <h1 class="hero__title" data-split="chars" data-reveal="heroTitle">
+              <span class="hero__line">Creative</span><br />
+              <span class="hero__line">Developer</span>
+            </h1>
+
+            <p class="hero__sub" data-reveal="fadeUp" style="--d: 0.1s">
+              I build premium, motion-first web experiences that feel alive — blending design, code, and a
+              touch of magic.
+            </p>
+
+            <div class="hero__cta" data-reveal="fadeUp" style="--d: 0.18s">
+              <a class="btn btn--primary magnetic" href="#work" data-cursor="cta">
+                <span class="btn__text">View selected work</span>
+                <span class="btn__icon" aria-hidden="true">↳</span>
+                <span class="btn__ripple" aria-hidden="true"></span>
+              </a>
+
+              <a class="btn btn--ghost magnetic" href="#contact" data-cursor="link">
+                <span class="btn__text">Let’s talk</span>
+                <span class="btn__icon" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="hero__stats" data-reveal="fadeUp" style="--d: 0.26s">
+              <div class="stat">
+                <div class="stat__num" data-count="6">0</div>
+                <div class="stat__label">Years experience</div>
+              </div>
+              <div class="stat">
+                <div class="stat__num" data-count="38">0</div>
+                <div class="stat__label">Projects shipped</div>
+              </div>
+              <div class="stat">
+                <div class="stat__num" data-count="12">0</div>
+                <div class="stat__label">Brands helped</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__right" aria-hidden="true">
+            <div class="heroCard" data-parallax="0.55">
+              <div class="heroCard__top">
+                <div class="heroCard__badge">Now</div>
+                <div class="heroCard__title">Design × Motion × Code</div>
+              </div>
+              <div class="heroCard__body">
+                <div class="heroCard__chip">GSAP</div>
+                <div class="heroCard__chip">Three.js</div>
+                <div class="heroCard__chip">WebGL</div>
+                <div class="heroCard__chip">UI/UX</div>
+              </div>
+              <div class="heroCard__glow" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scrollHint" data-reveal="fadeUp" style="--d: 0.34s" aria-hidden="true">
+          <span class="scrollHint__line"></span>
+          <span class="scrollHint__text">Scroll</span>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section about">
+        <div class="section__head">
+          <h2 class="h2" data-split="chars" data-reveal="heading">About</h2>
+          <p class="lead" data-reveal="fadeUp" style="--d: 0.06s">
+            My work lives where <span class="accent">editorial design</span> meets smooth, intentional motion.
+            I obsess over details so your site feels like a product — not a template.
+          </p>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__imageWrap" data-reveal="image">
+            <div class="about__image" role="img" aria-label="Profile placeholder"></div>
+            <div class="about__imageMask" aria-hidden="true"></div>
+          </div>
+
+          <div class="about__content">
+            <div class="about__copy" data-reveal="lines">
+              <p>
+                I’m <strong>Harsh Jethva</strong>, a Creative Developer crafting interactive web experiences with
+                crisp typography, premium transitions, and delightful micro-interactions.
+              </p>
+              <p>
+                I design and build with performance in mind — smooth 60fps motion, zero layout shifts, and a
+                clean, accessible foundation.
+              </p>
+            </div>
+
+            <div class="about__skills" data-reveal="fadeUp" style="--d: 0.1s">
+              <div class="tagCloud" aria-label="Skill tags">
+                <span class="tag">Motion Design</span>
+                <span class="tag">Interaction</span>
+                <span class="tag">Creative Coding</span>
+                <span class="tag">Brand Systems</span>
+                <span class="tag">WebGL</span>
+                <span class="tag">Accessibility</span>
+                <span class="tag">Performance</span>
+              </div>
+
+              <div class="bars" aria-label="Skill levels">
+                <div class="bar" data-bar="0.9">
+                  <div class="bar__top"><span>Frontend</span><span>90%</span></div>
+                  <div class="bar__track"><div class="bar__fill"></div></div>
+                </div>
+                <div class="bar" data-bar="0.75">
+                  <div class="bar__top"><span>Motion</span><span>75%</span></div>
+                  <div class="bar__track"><div class="bar__fill"></div></div>
+                </div>
+                <div class="bar" data-bar="0.65">
+                  <div class="bar__top"><span>Design</span><span>65%</span></div>
+                  <div class="bar__track"><div class="bar__fill"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section id="work" class="section work">
+        <div class="section__head">
+          <h2 class="h2" data-split="chars" data-reveal="heading">Selected Work</h2>
+          <p class="lead" data-reveal="fadeUp" style="--d: 0.06s">
+            Three quick case studies with premium hover states and scroll entrances. Replace with your real
+            projects anytime.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card" data-project data-reveal="card">
+            <a class="card__hit magnetic" href="#" data-open-project="0" data-cursor="project">
+              <div class="card__media">
+                <div class="card__img card__img--a" aria-hidden="true"></div>
+                <div class="card__overlay" aria-hidden="true">
+                  <div class="card__arrow">→</div>
+                </div>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">CipherShield</h3>
+                <p class="card__desc">Cyber security dashboard with threat insights, logs, and alert triage UI.</p>
+                <div class="card__meta">
+                  <span class="chip">Cyber Security</span>
+                  <span class="chip">Dashboard</span>
+                  <span class="chip">UI</span>
+                </div>
+              </div>
+            </a>
+            <div class="card__links">
+              <a class="link magnetic" href="#" data-cursor="link">Live</a>
+              <a class="link magnetic" href="#" data-cursor="link">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card" data-project data-reveal="card">
+            <a class="card__hit magnetic" href="#" data-open-project="1" data-cursor="project">
+              <div class="card__media">
+                <div class="card__img card__img--b" aria-hidden="true"></div>
+                <div class="card__overlay" aria-hidden="true">
+                  <div class="card__arrow">→</div>
+                </div>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">VISTORA LUXE</h3>
+                <p class="card__desc">Premium e-commerce storefront with cinematic product interactions.</p>
+                <div class="card__meta">
+                  <span class="chip">E-commerce</span>
+                  <span class="chip">UI/UX</span>
+                  <span class="chip">Animation</span>
+                </div>
+              </div>
+            </a>
+            <div class="card__links">
+              <a class="link magnetic" href="#" data-cursor="link">Live</a>
+              <a class="link magnetic" href="#" data-cursor="link">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card" data-project data-reveal="card">
+            <a class="card__hit magnetic" href="#" data-open-project="2" data-cursor="project">
+              <div class="card__media">
+                <div class="card__img card__img--c" aria-hidden="true"></div>
+                <div class="card__overlay" aria-hidden="true">
+                  <div class="card__arrow">→</div>
+                </div>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Neon Atlas</h3>
+                <p class="card__desc">Interactive portfolio concept with 3D hero and scroll storytelling.</p>
+                <div class="card__meta">
+                  <span class="chip">GSAP</span>
+                  <span class="chip">Three.js</span>
+                  <span class="chip">ScrollTrigger</span>
+                </div>
+              </div>
+            </a>
+            <div class="card__links">
+              <a class="link magnetic" href="#" data-cursor="link">Live</a>
+              <a class="link magnetic" href="#" data-cursor="link">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section skills">
+        <div class="section__head">
+          <h2 class="h2" data-split="chars" data-reveal="heading">Tech Stack</h2>
+          <p class="lead" data-reveal="fadeUp" style="--d: 0.06s">
+            A bounce-in icon grid + a subtle marquee strip for that “alive” feel.
+          </p>
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee__track">
+            <span>GSAP</span><span>Three.js</span><span>WebGL</span><span>Canvas</span><span>Type</span
+            ><span>Interaction</span><span>Accessibility</span><span>Performance</span><span>Design</span>
+            <span>GSAP</span><span>Three.js</span><span>WebGL</span><span>Canvas</span><span>Type</span
+            ><span>Interaction</span><span>Accessibility</span><span>Performance</span><span>Design</span>
+          </div>
+        </div>
+
+        <div class="skillGrid" role="list">
+          <div class="skill" role="listitem" data-reveal="skill"><span>HTML</span></div>
+          <div class="skill" role="listitem" data-reveal="skill"><span>CSS</span></div>
+          <div class="skill" role="listitem" data-reveal="skill"><span>JavaScript</span></div>
+          <div class="skill" role="listitem" data-reveal="skill"><span>GSAP</span></div>
+          <div class="skill" role="listitem" data-reveal="skill"><span>ScrollTrigger</span></div>
+          <div class="skill" role="listitem" data-reveal="skill"><span>Three.js</span></div>
+          <div class="skill" role="listitem" data-reveal="skill"><span>Lenis</span></div>
+          <div class="skill" role="listitem" data-reveal="skill"><span>Figma</span></div>
+          <div class="skill" role="listitem" data-reveal="skill"><span>Node</span></div>
+          <div class="skill" role="listitem" data-reveal="skill"><span>Git</span></div>
+          <div class="skill" role="listitem" data-reveal="skill"><span>Vite</span></div>
+          <div class="skill" role="listitem" data-reveal="skill"><span>Framer</span></div>
+        </div>
+      </section>
+
+      <!-- CODING PLATFORMS -->
+      <section id="platforms" class="section platforms">
+        <div class="section__head">
+          <h2 class="h2" data-split="chars" data-reveal="heading">Coding Platforms</h2>
+          <p class="lead" data-reveal="fadeUp" style="--d: 0.06s">
+            Where I stay sharp — problem solving, shipping code, and security labs.
+          </p>
+        </div>
+
+        <div class="platformGrid">
+          <a class="platformCard magnetic" href="#" target="_blank" rel="noreferrer" data-cursor="link" data-reveal="card">
+            <div class="platformCard__top">
+              <div class="platformCard__icon" aria-hidden="true">LC</div>
+              <div class="platformCard__meta">
+                <div class="platformCard__name">LeetCode</div>
+                <div class="platformCard__handle muted">@harshjethva</div>
+              </div>
+            </div>
+            <div class="platformCard__stats">
+              <div class="miniStat"><span class="miniStat__k">Streak</span><span class="miniStat__v">—</span></div>
+              <div class="miniStat"><span class="miniStat__k">Solved</span><span class="miniStat__v">—</span></div>
+            </div>
+          </a>
+
+          <a class="platformCard magnetic" href="#" target="_blank" rel="noreferrer" data-cursor="link" data-reveal="card">
+            <div class="platformCard__top">
+              <div class="platformCard__icon platformCard__icon--b" aria-hidden="true">CF</div>
+              <div class="platformCard__meta">
+                <div class="platformCard__name">Codeforces</div>
+                <div class="platformCard__handle muted">@harshjethva</div>
+              </div>
+            </div>
+            <div class="platformCard__stats">
+              <div class="miniStat"><span class="miniStat__k">Rating</span><span class="miniStat__v">—</span></div>
+              <div class="miniStat"><span class="miniStat__k">Contests</span><span class="miniStat__v">—</span></div>
+            </div>
+          </a>
+
+          <a class="platformCard magnetic" href="#" target="_blank" rel="noreferrer" data-cursor="link" data-reveal="card">
+            <div class="platformCard__top">
+              <div class="platformCard__icon platformCard__icon--c" aria-hidden="true">HR</div>
+              <div class="platformCard__meta">
+                <div class="platformCard__name">HackerRank</div>
+                <div class="platformCard__handle muted">@harshjethva</div>
+              </div>
+            </div>
+            <div class="platformCard__stats">
+              <div class="miniStat"><span class="miniStat__k">Badges</span><span class="miniStat__v">—</span></div>
+              <div class="miniStat"><span class="miniStat__k">Skills</span><span class="miniStat__v">—</span></div>
+            </div>
+          </a>
+
+          <a class="platformCard magnetic" href="#" target="_blank" rel="noreferrer" data-cursor="link" data-reveal="card">
+            <div class="platformCard__top">
+              <div class="platformCard__icon platformCard__icon--d" aria-hidden="true">GH</div>
+              <div class="platformCard__meta">
+                <div class="platformCard__name">GitHub</div>
+                <div class="platformCard__handle muted">@harsh-jethva</div>
+              </div>
+            </div>
+            <div class="platformCard__stats">
+              <div class="miniStat"><span class="miniStat__k">Repos</span><span class="miniStat__v">—</span></div>
+              <div class="miniStat"><span class="miniStat__k">Stars</span><span class="miniStat__v">—</span></div>
+            </div>
+          </a>
+
+          <a class="platformCard magnetic" href="#" target="_blank" rel="noreferrer" data-cursor="link" data-reveal="card">
+            <div class="platformCard__top">
+              <div class="platformCard__icon platformCard__icon--e" aria-hidden="true">THM</div>
+              <div class="platformCard__meta">
+                <div class="platformCard__name">TryHackMe</div>
+                <div class="platformCard__handle muted">@harshjethva</div>
+              </div>
+            </div>
+            <div class="platformCard__stats">
+              <div class="miniStat"><span class="miniStat__k">Rooms</span><span class="miniStat__v">—</span></div>
+              <div class="miniStat"><span class="miniStat__k">Rank</span><span class="miniStat__v">—</span></div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section experience">
+        <div class="section__head">
+          <h2 class="h2" data-split="chars" data-reveal="heading">Experience</h2>
+          <p class="lead" data-reveal="fadeUp" style="--d: 0.06s">
+            A vertical timeline with scroll-triggered entrances.
+          </p>
+        </div>
+
+        <div class="timeline" role="list">
+          <article class="tlItem" role="listitem" data-reveal="timeline">
+            <div class="tlItem__dot" aria-hidden="true"></div>
+            <div class="tlItem__card">
+              <div class="tlItem__top">
+                <h3>Creative Developer — Studio A</h3>
+                <span class="muted">2024 — Present</span>
+              </div>
+              <p>Built motion-led marketing sites, interactive product launches, and component systems.</p>
+            </div>
+          </article>
+
+          <article class="tlItem" role="listitem" data-reveal="timeline">
+            <div class="tlItem__dot" aria-hidden="true"></div>
+            <div class="tlItem__card">
+              <div class="tlItem__top">
+                <h3>Frontend Engineer — Company B</h3>
+                <span class="muted">2022 — 2024</span>
+              </div>
+              <p>Shipped accessible UI at scale, improved Core Web Vitals, and led animation guidelines.</p>
+            </div>
+          </article>
+
+          <article class="tlItem" role="listitem" data-reveal="timeline">
+            <div class="tlItem__dot" aria-hidden="true"></div>
+            <div class="tlItem__card">
+              <div class="tlItem__top">
+                <h3>Designer → Developer — Freelance</h3>
+                <span class="muted">2020 — 2022</span>
+              </div>
+              <p>Partnered with founders to create brand-driven sites with premium interaction design.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact">
+        <div class="section__head">
+          <h2 class="h2 contact__big" data-split="chars" data-reveal="heading">Let’s Talk</h2>
+          <p class="lead" data-reveal="fadeUp" style="--d: 0.06s">
+            Have a project in mind? Send a message — I reply fast.
+          </p>
+        </div>
+
+        <div class="contact__grid">
+          <form class="form" autocomplete="on" novalidate>
+            <div class="field" data-reveal="fadeUp">
+              <input id="name" name="name" type="text" required minlength="2" placeholder=" " />
+              <label for="name">Name</label>
+              <div class="field__line" aria-hidden="true"></div>
+            </div>
+            <div class="field" data-reveal="fadeUp" style="--d: 0.06s">
+              <input id="email" name="email" type="email" required placeholder=" " />
+              <label for="email">Email</label>
+              <div class="field__line" aria-hidden="true"></div>
+            </div>
+            <div class="field field--area" data-reveal="fadeUp" style="--d: 0.12s">
+              <textarea id="message" name="message" rows="5" required minlength="8" placeholder=" "></textarea>
+              <label for="message">Message</label>
+              <div class="field__line" aria-hidden="true"></div>
+            </div>
+
+            <button class="btn btn--primary magnetic" type="submit" data-cursor="cta" data-reveal="fadeUp" style="--d: 0.18s">
+              <span class="btn__text">Send message</span>
+              <span class="btn__icon" aria-hidden="true">→</span>
+              <span class="btn__ripple" aria-hidden="true"></span>
+            </button>
+
+            <p class="form__note muted" data-reveal="fadeUp" style="--d: 0.24s">
+              This demo form shows validation feedback but doesn’t send email (no backend).
+            </p>
+          </form>
+
+          <aside class="contact__aside">
+            <div class="contact__box" data-reveal="fadeUp">
+              <div class="contact__label muted">Social</div>
+              <div class="social">
+                <a class="social__link magnetic" href="#" aria-label="Twitter" data-cursor="link">X</a>
+                <a class="social__link magnetic" href="#" aria-label="LinkedIn" data-cursor="link">in</a>
+                <a class="social__link magnetic" href="#" aria-label="GitHub" data-cursor="link">gh</a>
+                <a class="social__link magnetic" href="#" aria-label="Email" data-cursor="link">@</a>
+              </div>
+            </div>
+
+            <div class="contact__box" data-reveal="fadeUp" style="--d: 0.08s">
+              <div class="contact__label muted">Email</div>
+              <a class="contact__value magnetic" href="mailto:harsh@example.com" data-cursor="link">harsh@example.com</a>
+            </div>
+
+            <div class="contact__box" data-reveal="fadeUp" style="--d: 0.16s">
+              <div class="contact__label muted">Location</div>
+              <div class="contact__value">Remote / Your City</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__left">
+            <div class="footer__brand">Harsh Jethva</div>
+            <div class="muted">© <span id="year"></span> — Built with motion.</div>
+          </div>
+          <div class="footer__right">
+            <button class="toTop magnetic" type="button" data-cursor="link" aria-label="Scroll to top">
+              <span>Back to top</span>
+              <span aria-hidden="true">↑</span>
+            </button>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Project modal -->
+    <dialog class="modal" id="projectModal" aria-label="Project preview">
+      <div class="modal__inner">
+        <button class="modal__close magnetic" type="button" data-cursor="link" aria-label="Close">
+          <span aria-hidden="true">✕</span>
+        </button>
+
+        <div class="modal__media" aria-hidden="true"></div>
+        <div class="modal__content">
+          <h3 class="modal__title">Project</h3>
+          <p class="modal__desc muted">Description…</p>
+          <div class="modal__tags"></div>
+          <div class="modal__actions">
+            <a class="btn btn--ghost magnetic" href="#" target="_blank" rel="noreferrer" data-cursor="link">
+              <span class="btn__text">Live</span>
+              <span class="btn__icon" aria-hidden="true">↗</span>
+            </a>
+            <a class="btn btn--ghost magnetic" href="#" target="_blank" rel="noreferrer" data-cursor="link">
+              <span class="btn__text">GitHub</span>
+              <span class="btn__icon" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
